@@ -1,0 +1,42 @@
+.banner-wrapper {
+  .banner {
+    width: 945px;
+    height: 486px;
+    background: #D42452 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+
+    h1 {
+      bottom: 0;
+      width: 406px;
+      text-align: left;
+      font-weight: lighter;
+      font-size: 44px;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      padding: 310px 20px 20px;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+
+    .primary-button {
+      width: 470px;
+      height: 110px;
+      background: #004C5F 0% 0% no-repeat padding-box;
+      opacity: 1;
+      font-size: 16px;
+      font-weight: lighter;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      border-radius: 0;
+      position: absolute;
+      top: 450px;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  } 
+}
