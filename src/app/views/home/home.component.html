@@ -117,14 +117,124 @@
             <div class="col-md-7">
               <div class="section-two-prefix">
                 <h3>Após anos atuando no desenvolvimento de soluções personalizadas,
-                  identificamos problemas recorrentes enfrentados pelos gestores da área de Trade Marketing.</h3>
+                  identificamos problemas recorrentes enfrentados pelos gestores da área de <strong>Trade Marketing.</strong></h3>
               </div>
             </div>
           </div>
-        <!-- Section Two Title-->
+          <!-- Section Two Title-->
+
+          <!-- Section Two Content-->
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-end">
+              <div class="section-two-content">
+                <ul>
+                  <li> <div class="hexagono"></div>Perda de documentos das ações promocionais</li>
+                  <li> <div class="hexagono"></div>Dificuldades para fortalecer o relacionamento</li>
+                  <li> <div class="hexagono"></div>Problemas com fraudes</li>
+                  <li> <div class="hexagono"></div>Problemas de comunicação</li>
+                  <li> <div class="hexagono"></div>Falta de agilidade</li>
+                  <li> <div class="hexagono"></div>Dificuldades para formalizar e registrar os acordos</li>
+                  <li> <div class="hexagono"></div>Perda de oportunidades</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- /Section Two Content-->
         </div>
       </div>
     </div>
   </div>
-  <!-- /Section two-->
+  <!-- /Section two-->      
+
+  <!-- Section Three - Gain -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-three-wrapper">
+              <!-- Section Three Title-->
+              <div class="row">
+                <div class="offset-md-1 col-md-7">
+                  <div class="section-three-prefix">
+                    <h3>O <strong>Trade Suite </strong>foi criado com o objetivo de facilitar o trabalho dos gestores da área de Trade Marketing.</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-4 section-three-title">
+                  <div class="boxes-wrapper">
+                    <div class="box-left"></div>
+                    <div class="box-right d-flex justify-content-start">
+                      <h2>Ganhos</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Section Two Title-->
+
+              <!-- Section Three Content-->
+              <div class="row">
+                <div class="col-md-12 d-flex justify-content-end">
+                  <div class="section-three-content">
+                    <ul>
+                      <li><div class="hexagono"></div> Melhor acompanhamento das metas e resultados</li>
+                      <li><div class="hexagono"></div> Facilidade para compartilhar informações</li>
+                      <li><div class="hexagono"></div> Informações centralizadas</li>
+                      <li><div class="hexagono"></div> Facilidade na auditoria</li>
+                      <li><div class="hexagono"></div> Mais autonomia</li>
+                      <li><div class="hexagono"></div> Incremento de vendas</li>
+                      <li><div class="hexagono"></div> Mais agilidade</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /Section Two Content-->
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Section Three - Gain -->
+
+  <!-- Section Four Solutions -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="section-four-wrapper">
+          <!-- Section Four Title-->
+          <div class="row">
+            <div class="col-md-5 section-four-title">
+              <div class="boxes-wrapper">
+                <div class="box-left"></div>
+                <div class="box-right d-flex justify-content-end">
+                  <h2>Soluções</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-7">
+              <div class="section-four-prefix">
+                <h3>O <strong>Trade Suite</strong> é uma ferramenta modular que permite ser configurada conforme a necessidade de cada cliente e já está preparada para suportar vários idiomas.</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Section Four Title-->
+
+          <!-- Section Four Cards-->
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center flex-wrap"> 
+              <div *ngFor="let item of items">  
+                <app-cards
+                  [item]="item">
+                </app-cards>
+              </div>
+            </div>
+          </div>
+          <!-- Section Four Cards-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / Section Four - Solutions --> 
 </div>
