@@ -610,6 +610,40 @@
   .banner-wrapper {
     .banner {
       width: 100%;
+
+      h1 {
+        width:100%;
+      }
+
+      .primary-button {
+        width: 100%;
+      }
     }
+  }
+
+  .section-one-title {
+    width: 100%;
+  }
+
+  .section-one-wrapper {
+    width: 100%;
+  }
+
+  .box-left, .box-right, .logo-wrapper, .primary-button {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  .bg-hexagono-pink, .bg-hexagono-blue {
+    display: none;
+  }
+
+  .section-two-content, .section-three-content {
+    width: 100%;
+  }
+
+  .card, img {
+    width: 100%;
   }
 }

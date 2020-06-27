@@ -46,3 +46,9 @@
     opacity: 1;
   }
 }
+
+@media(max-width:991px) {
+  .cards {
+    width: 100%;
+  }
+}
