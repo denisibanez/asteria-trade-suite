@@ -236,5 +236,120 @@
       </div>
     </div>
   </div>
-  <!-- / Section Four - Solutions --> 
+  <!-- / Section Four - Solutions -->
+
+  <!--Section Five - Clients-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-five-wrapper">
+              <!-- Section Five Title-->
+              <div class="offset-md-8 col-md-4 section-five-title">
+                <div class="boxes-wrapper">
+                  <div class="box-left"></div>
+                  <div class="box-right d-flex justify-content-start">
+                    <h2>Clientes que nos <strong>inspiraram</strong></h2>
+                  </div>
+                </div>
+              </div>
+              <!-- Section Five Title-->
+            </div>  
+          </div>
+        </div>
+
+        <div class="row">
+          <div class=" col-md-9">
+            <div class="section-five-prefix">
+              <h3>
+                É com muito orgulho que destacamos abaixo alguns dos principais clientes e parceiros atendidos pela
+                <strong class="orange">Astéria</strong> no desenvolvimento de soluções
+                para<strong> Trade Marketing.</strong>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Five Content-->
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-end">
+            <div class="section-five-content">
+              <div id="carouselExampleCaptions" class="multi-item-carousel carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li
+                    *ngFor="let item of slideItems; let i = index" 
+                    data-target="#carouselExampleCaptions" 
+                    [attr.data-slide-to]="i"
+                    [class]="i == 0 ? 'active' : ''">
+                  </li>
+                </ol>
+                <div class="carousel-inner">
+                  <div
+                    *ngFor="let item of slideItems; let i = index" 
+                    [class]="i == 0 ? 'carousel-item active' : 'carousel-item'">
+                    <div class="card">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img [src]="item.src" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="col-md-8">
+                          <h3><strong>João Carlos</strong> - Presidente</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>                 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Section Five Content-->
+      </div>
+    </div>
+  </div>
+  <!--/Section Five - Clients-->
+
+  <!-- Footer -->
+  <div class="row footer-wrapper">
+    <div class="col md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="logo">
+              <img src="../../assets/Logo.TradeSuite.svg" alt="">
+            </div>
+
+            <p>Copyright - Termos de Uso e Política de Privacidade</p>
+          </div>
+
+          <div class="col-md-7">
+            <ul class="footer-menu">
+              <li>Quem somos</li>
+              <li>Dores e Ganhos</li>
+              <li>Soluções</li>
+              <li>Clientes</li>
+              <li>Contato</li>
+            </ul>
+
+            <ul class="footer-social">
+              <li>
+                <img src="../../assets/linkedin-in.svg" alt="">
+              </li>
+              <li>
+                <img src="../../assets/facebook-f.svg" alt="">
+              </li>
+              <li>
+                <img src="../../assets/instagram.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Footer -->
 </div>
+
