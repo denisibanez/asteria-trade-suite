@@ -1,12 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
+
+import { ContactService } from '../../services/contact-service'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [ ContactService ]
 })
 export class HomeComponent implements OnInit {
   public slideItems: any
+  public messageResponse: any
+  public formAtribute: FormGroup = new FormGroup({
+    'name': new FormControl(null, [Validators.required]),
+    'lastName': new FormControl(null, [Validators.required]),
+    'companyName': new FormControl(null, [Validators.required]),
+    'mail': new FormControl(null, [Validators.required]),
+    'cellphone': new FormControl(null, [Validators.required]),
+    'message': new FormControl(null, [Validators.required])
+  })
+
   public items = [
     { url: '../../../assets/bullseye-arrow.svg', title: 'Gerenciamento de Metas', text:'A chave para o crescimento das vendas começa com uma estratégia bem desenvolvida junto aos parceiros, com objetivos claros e bem definidos de vendas, personalizados para cada um.' },
     { url: '../../../assets/chart-bar.svg', title: 'Faturamentos & KPIs', text:'Municie sua equipe e seus clientes com informações atualizadas diariamente para acompanhamento do faturamento, KPIs e informações gerenciais por período, segmento, linha de produtos.' },
@@ -15,7 +29,8 @@ export class HomeComponent implements OnInit {
     { url: '../../../assets/hands-usd.svg', title: 'Gestão de Bonificação', text:'Bonifique os parceiros comprometidos com os objetivos da corporação e que estejam trazendo bons resultados.' },
     { url: '../../../assets/badge-percent.svg', title: 'Ações Promocionais', text:'Crie e acompanhe ações promocionais com o auxílio de ferramentas intuitivas que permitem os usuários alocarem gastos previamente aprovados, garantindo uma execução precisa e consistente.' }
   ]
-  constructor() {
+
+  constructor(private contactService: ContactService) {
   }
 
   ngOnInit(): void {
@@ -26,5 +41,30 @@ export class HomeComponent implements OnInit {
       { src: '../../../assets/Logo.Schneider.svg', title: 'Title 4' },
       { src: '../../../assets/Logo.Schneider.svg', title: 'Title 5' }
     ];
+  }
+
+  sendForm():void {
+    if(this.formAtribute.status === 'VALID') {
+      let formularioData = {
+        'name': this.formAtribute.value.name,
+        'lastName': this.formAtribute.value.lastName,
+        'companyName': this.formAtribute.value.companyName,
+        'email': this.formAtribute.value.mail,
+        'phone': this.formAtribute.value.phone,
+        'message': this.formAtribute.value.message
+      }
+
+      this.contactService.sendContact(formularioData).subscribe(
+        (response: any) => {
+          console.log(response)
+          this.messageResponse = 'Sua mensagem foi enviada com sucesso!'
+        },
+        (error) => {
+          this.messageResponse = 'Ops! Ocorreu um erro no envio da sua mensagem.'
+        }
+      )
+    } else {
+      this.formAtribute.markAllAsTouched
+    }
   }
 }
