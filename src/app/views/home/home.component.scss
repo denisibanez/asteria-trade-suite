@@ -703,6 +703,12 @@
           font-weight: bold;
           padding: 0 25px 25px;
           cursor: pointer;
+
+          a {
+            color: white;
+            text-decoration: none;
+            transition: 2s;
+          }
         }
       }
   

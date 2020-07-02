@@ -7,8 +7,15 @@
     padding: 0 15px;
     cursor: pointer;
     color: #ffffff;
+
     &:hover {
       color: #D42452;
+    }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      transition: 2s;
     }
   }
 }
