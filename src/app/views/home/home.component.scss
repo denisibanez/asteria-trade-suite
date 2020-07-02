@@ -237,7 +237,8 @@
 
       .hexagono {
         position: relative;
-        width: 15px; 
+        width: 100%;
+        max-width: 15px;
         height: 8.66px;
         background-color: #414141;
         margin: 4.33px 0;
@@ -352,7 +353,8 @@
 
       .hexagono {
         position: relative;
-        width: 15px; 
+        width: 100%;
+        max-width: 15px;
         height: 8.66px;
         background-color: #414141;
         margin: 4.33px 0;
@@ -915,8 +917,113 @@ label {
   }
 }
 
-@media(max-width: 768px) {
-  .footer-wrapper { 
+@media(max-width: 991px) {
+  .translate-wrapper {
+    img {
+      width: auto !important;
+    }
+  }
+
+  .logo-wrapper {
+    width: 100px !important;
+    height: 100px !important;
+    position: absolute !important;
+    right: 40px;
+    left: 230px !important;
+    top: 0px;
+
+    img {
+      margin-top: -30px;
+    }
+  }
+
+  .banner-wrapper {
+    .banner {
+      h1 {
+        font-size: 30px;
+      }
+
+      .primary-button {
+        top: 800px;
+        z-index: 999;
+
+        &:after {
+          left: 15px;
+        }
+      }
+    }
+  }
+
+  .reset-flex-end-mobile {
+    justify-content: center !important;
+  }
+
+  .section-two-wrapper {
+    margin: 245px 0 50px;
+    
+    .section-two-content {
+      width: 100%;
+      margin-top: 15px;
+      height: auto;
+
+      ul {
+        padding-left: 0;
+        padding: 15px;
+      }
+    }
+  }
+
+  .section-three-wrapper {
+    margin: 0px 0 50px;
+
+    .section-three-title {
+      margin-top: 120px;
+    }
+
+    .section-three-content {
+      width: 100%;
+      height: auto;
+
+      ul {
+        padding-left: 0;
+        padding: 15px;
+      }
+    }
+  }
+
+  .section-four-wrapper {
+    margin: 120px 0 50px;
+
+    .section-four-prefix {
+      margin-top: 100px;
+    }
+  }
+
+  .section-five-wrapper {
+    margin: 25px 0 50px;
+  }
+
+  .section-five-content {
+    .carousel-inner {
+      .carousel-item {
+        .card {
+          height: auto;
+          padding: 15px 30px;
+        }
+      }
+    }
+
+    .carousel-indicators {
+      top: 365px;
+    }
+  }
+
+  .section-six-wrapper {
+    margin: 150px 0 50px;
+  }
+
+  .footer-wrapper {
+    margin-top: 0;
     .container {
       ul.footer-menu {
         display: none;
