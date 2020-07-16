@@ -35,10 +35,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.slideItems = [
-      { src: '../../../assets/Logo.Schneider.svg', title: 'Title 1' },
-      { src: '../../../assets/Logo.Schneider.svg', title: 'Title 2' },
-      { src: '../../../assets/Logo.Schneider.svg', title: 'Title 3' },
-      { src: '../../../assets/Logo.Schneider.svg', title: 'Title 4' },
+      { src: '../../../assets/Logo.SW.svg', title: 'Title 1' },
+      { src: '../../../assets/Logo.Kimberly.svg', title: 'Title 2' },
+      { src: '../../../assets/Logo.Astellas.svg', title: 'Title 3' },
+      { src: '../../../assets/Logo.Vivid.png', title: 'Title 4' },
       { src: '../../../assets/Logo.Schneider.svg', title: 'Title 5' }
     ];
   }
