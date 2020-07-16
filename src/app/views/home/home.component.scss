@@ -727,6 +727,7 @@
 .wrapper-form {
   margin-top: 15px;
   margin-bottom: 170px;
+  background-color: #ffffff;
 
   .btn-secundary {
     width: 170px;
@@ -778,6 +779,14 @@ label {
 
 .error {
   color: #D42452;
+}
+
+.alert {
+  position: fixed;
+  bottom: 150px;
+  transition: ease-in 2s;
+  z-index: 99999999;
+  float: right;
 }
 
 @media(max-width:1400px) {

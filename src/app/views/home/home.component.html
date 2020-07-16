@@ -399,7 +399,8 @@
                   class="form-control"
                   id="cellphone"
                   aria-describedby="cellphone"
-                  formControlName="cellphone">
+                  formControlName="cellphone"
+                  mask="(00) 00000-0000">
                 <small
                   class="form-text text-danger"
                   *ngIf="!formAtribute.get('cellphone').valid && formAtribute.get('cellphone').touched">
@@ -440,8 +441,13 @@
     </div>
 
     <div class="row" *ngIf="messageResponse">
-      <div class="offset-md-1 col-md-11">
-        <p class="error">{{messageResponse}}</p>
+      <div class="col-md-12 d-flex justify-content-end">
+        <div 
+        class="alert"
+        [class]="messageResponse.key == 200 ? 'alert-success' : 'alert-danger'"
+        role="alert">
+            {{messageResponse.value}}
+        </div>
       </div>
     </div>
     <!-- /Section Six Title-->

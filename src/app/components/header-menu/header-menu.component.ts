@@ -10,7 +10,7 @@ export class HeaderMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.onload = function(e) {
+    window.onload = function(e: any) {
       var offset: any = document.getElementsByClassName('header')[0].offsetTop;
       var menu: any = document.getElementsByClassName('header')[0];
       var screenWidth: any = screen.width;

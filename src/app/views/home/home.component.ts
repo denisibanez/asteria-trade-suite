@@ -57,14 +57,40 @@ export class HomeComponent implements OnInit {
       this.contactService.sendContact(formularioData).subscribe(
         (response: any) => {
           console.log(response)
-          this.messageResponse = 'Sua mensagem foi enviada com sucesso!'
+          this.messageResponse = {
+            key: 200,
+            value: 'Sua mensagem foi enviada com sucesso!'
+          }
+
+          this.clearForm()
         },
         (error) => {
-          this.messageResponse = 'Ops! Ocorreu um erro no envio da sua mensagem.'
-        }
-      )
+          this.messageResponse = {
+            key: 500,
+            value: 'Ops! Ocorreu um erro no envio da sua mensagem.'
+          }
+
+          this.clearForm()
+        })
     } else {
       this.formAtribute.markAllAsTouched
     }
+  }
+
+  clearForm(): void {
+    const _self=  this
+
+    setTimeout(function(){ 
+      _self.messageResponse = null
+    }, 5000);
+
+    this.formAtribute = new FormGroup({
+      'name': new FormControl(null, [Validators.required]),
+      'lastName': new FormControl(null, [Validators.required]),
+      'companyName': new FormControl(null, [Validators.required]),
+      'mail': new FormControl(null, [Validators.required]),
+      'cellphone': new FormControl(null, [Validators.required]),
+      'message': new FormControl(null, [Validators.required])
+    })
   }
 }

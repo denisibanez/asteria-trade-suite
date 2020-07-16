@@ -9,6 +9,8 @@ import { HomeComponent } from './views/home/home.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 import { CardsComponent } from './components/cards/cards.component';
 
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { CardsComponent } from './components/cards/cards.component';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(options)
   ],
   providers: [],
   bootstrap: [AppComponent]
